@@ -11,6 +11,9 @@ function includes (target, ...search) {
   return search.every(elem => target.includes(elem))
 }
 
+const $ = slt => document.querySelector(slt)
+
 export {
-  includes
+  includes,
+  $
 }
