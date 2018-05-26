@@ -1,7 +1,7 @@
 language: node_js
 before_script:
-- yarn install
-- yarn run build
+- npm install
+- npm run build
 node_js:
 - node
 deploy:
