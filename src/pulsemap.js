@@ -10,7 +10,7 @@ import extend from './extend.js'
  * @param  {Number} [config.factor] Delay factor
  * @return {Array}                  Array of numbers denoting signals, in milliseconds
  */
-function pulsemap (morse, config) {
+function pulsemap (morse, config = {}) {
   const factor = config.factor || 1000
 
   return extend(morse).split('').map((symbol) => {
