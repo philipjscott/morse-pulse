@@ -10,7 +10,7 @@ import { includes } from './util'
  * @return {String}       The extended morse code
  */
 function extend (morse) {
-  const noiseGlyphes = ['.', '-']
+  const noiseGlyphes = ['·', '-']
 
   return morse.replace(' / ', '/').split('').reduce((acc, curr, i, arr) => {
     return includes(noiseGlyphes, curr, arr[i + 1])

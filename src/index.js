@@ -3,11 +3,17 @@ import pulsemap from './pulsemap'
 import { $ } from './util'
 
 const morse = new Morsey()
-const message = 'hello, world'
-const hello = morse.encode(message)
-const pulses = pulsemap(hello)
 
-$('#pulsify').addEventListener('click', (e) => {
-  $('#morse').innerHTML = hello
+let encoded
+let pulses
+
+$('#morse-form').addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  encoded = morse.encode($('#message').value)
+  pulses = pulsemap(encoded, { factor: 500 })
+
+  $('#morse').innerHTML = encoded
+
   window.navigator.vibrate(pulses)
 })
