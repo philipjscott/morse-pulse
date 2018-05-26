@@ -14,6 +14,10 @@ h1, h2, h3, form {
   text-align: center;
 }
 
+#img-container {
+  text-align: center;
+}
+
 #morse {
   text-align: center;
   font-size: 2em;
