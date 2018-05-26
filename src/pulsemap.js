@@ -20,7 +20,7 @@ function pulsemap (morse, config = {}) {
       case '*':
         delay = 1
         break
-      case '.':
+      case '·':
         delay = 1
         break
       case '-':

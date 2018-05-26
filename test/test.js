@@ -34,15 +34,15 @@ describe('pulsemap library', () => {
 
   describe('extend maps morse code to extended morse', () => {
     it('correctly maps a simple morse code string', () => {
-      const hello = '.... . .-.. .-.. ---'
-      const extended = '.*.*.*. . .*-*.*. .*-*.*. -*-*-'
+      const hello = '···· · ·-·· ·-·· ---'
+      const extended = '·*·*·*· · ·*-*·*· ·*-*·*· -*-*-'
 
       expect(extend(hello)).to.equal(extended)
     })
 
     it('correctly maps a "complicated" morse code string', () => {
-      const helloWorld = '.... . .-.. .-.. --- --..-- / .-- --- .-. .-.. -..'
-      const extended = '.*.*.*. . .*-*.*. .*-*.*. -*-*- -*-*.*.*-*-/.*-*- -*-*- .*-*. .*-*.*. -*.*.'
+      const helloWorld = '···· · ·-·· ·-·· --- --··-- / ·-- --- ·-· ·-·· -··'
+      const extended = '·*·*·*· · ·*-*·*· ·*-*·*· -*-*- -*-*·*·*-*-/·*-*- -*-*- ·*-*· ·*-*·*· -*·*·'
 
       expect(extend(helloWorld)).to.equal(extended)
     })
@@ -50,7 +50,7 @@ describe('pulsemap library', () => {
 
   describe('pulsemap maps morse code strings to numbers', () => {
     it('correctly maps a simple morse code string', () => {
-      const hello = '.... . .-.. .-.. ---'
+      const hello = '···· · ·-·· ·-·· ---'
       const pulses = [
         1000, 1000, 1000, 1000, 1000, 1000, 1000, 3000,
         1000, 3000,
@@ -63,7 +63,7 @@ describe('pulsemap library', () => {
     })
 
     it('correctly maps a "complicated" morse code string', () => {
-      const helloWorld = '.... . .-.. .-.. --- --..-- / .-- --- .-. .-.. -..'
+      const helloWorld = '···· · ·-·· ·-·· --- --··-- / ·-- --- ·-· ·-·· -··'
       const pulses = [
         1000, 1000, 1000, 1000, 1000, 1000, 1000, 3000,
         1000, 3000,
@@ -82,7 +82,7 @@ describe('pulsemap library', () => {
     })
 
     it('accepts custom delay factors', () => {
-      const hello = '.... . .-.. .-.. ---'
+      const hello = '···· · ·-·· ·-·· ---'
       const config = { factor: 10 }
       const pulses = [
         10, 10, 10, 10, 10, 10, 10, 30,
