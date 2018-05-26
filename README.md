@@ -1,2 +1,3 @@
 # morse-pulse
-Convert a morse code string to phone vibrations, in the browser :wink:
+
+Phone vibrations from morse code, in the [browser](http://scottyfillups.io/morse-pulse/)! :tada::vibration_mode::tada:
