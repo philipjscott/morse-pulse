@@ -5,11 +5,13 @@ import extend from './extend.js'
 /**
  * Maps morse code to an array of pulses and delays
  * @method pulsemap
- * @param  {morse}  morse Morse code that uses [.-/ ] as glyphes
- * @return {Array}        Array of numbers denoting signals, in milliseconds
+ * @param  {morse}  morse           Morse code that uses [.-/ ] as glyphes
+ * @param  {Object} config          Configuation object
+ * @param  {Number} [config.factor] Delay factor
+ * @return {Array}                  Array of numbers denoting signals, in milliseconds
  */
-function pulsemap (morse) {
-  const factor = 100
+function pulsemap (morse, config = {}) {
+  const factor = config.factor || 1000
 
   return extend(morse).split('').map((symbol) => {
     let delay

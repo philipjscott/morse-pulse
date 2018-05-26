@@ -7,6 +7,7 @@ const message = 'hello, world'
 const hello = morse.encode(message)
 const pulses = pulsemap(hello)
 
-$('#morse').addEventListener('click', (e) => {
+$('#pulsify').addEventListener('click', (e) => {
+  $('#morse').innerHTML = hello
   window.navigator.vibrate(pulses)
 })
